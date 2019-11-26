@@ -1,0 +1,12 @@
+<header>
+    <h2 class="logo" [routerLink]="['Home']">Logo</h2>
+</header>
+<nav>
+    <a [routerLink]="['Home']">Home</a>
+    <a [routerLink]="['Customer']">Customer</a>
+    <a [routerLink]="['Supplier']">Supplier</a>
+</nav>
+<div class="container" id=content-container>
+    <router-outlet></router-outlet>
+</div>
+<footer></footer>

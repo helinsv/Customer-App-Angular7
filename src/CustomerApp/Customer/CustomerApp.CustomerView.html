@@ -1,0 +1,26 @@
+{{Title}}
+
+<mat-card class="col-4 offset-4">
+    <mat-form-field>
+        <input matInput [(ngModel)]="CustomerModel.CustomerCode" placeholder="Customer Code:">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="CustomerModel.CustomerName" placeholder="Customer Name:">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="CustomerModel.CustomerAmount" placeholder="Customer Amount:">
+    </mat-form-field>
+    <div class=loginButtonContainer>
+        <button (click)="Add()" mat-flat-button color="primary" type="button" value="Add">Add</button>
+        <button mat-flat-button>Cancel</button>
+    </div>
+</mat-card>
+
+<mat-card class="col-4 offset-4" *ngFor="let Cust of CustomerModels">
+    <mat-list>
+        <mat-list-item><b>Customer Code:</b> {{ Cust.CustomerCode}} </mat-list-item>
+        <mat-list-item><b>Customer Name:</b> {{ Cust.CustomerName}} </mat-list-item>
+        <mat-list-item><b>Customer Amount:</b> {{ Cust.CustomerAmount}} </mat-list-item>
+        <hr>
+    </mat-list>
+</mat-card>
